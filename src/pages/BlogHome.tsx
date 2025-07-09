@@ -73,14 +73,22 @@ const BlogHome = () => {
             Discover fresh insights and cutting-edge content generated automatically. 
             Welcome to the future of intelligent blogging.
           </p>
-          <Button size="lg" className="font-semibold">
+          <Button 
+            size="lg" 
+            className="font-semibold"
+            onClick={() => {
+              document.getElementById('latest-posts')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+          >
             Explore Latest Posts
           </Button>
         </div>
       </section>
 
       {/* Blog Posts */}
-      <section className="py-16 px-4">
+      <section id="latest-posts" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold mb-12 text-center">Latest Articles</h2>
           
